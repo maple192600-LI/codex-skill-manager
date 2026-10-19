@@ -30,13 +30,15 @@ Chinese explanations are stored separately without rewriting managed plugins or 
 
 ## One-command installation
 
-Requires **Node.js 24+ with npm/npx, Git, and Codex with the `plugin` commands**. The tested desktop environment is Windows. Other operating systems have not completed real-client acceptance.
+Requires **Node.js 24+, npm 12+ with npx, Git, and Codex with the `plugin` commands**. The tested desktop environment is Windows. Other operating systems have not completed real-client acceptance.
 
 ```sh
-npx --yes github:maple192600-LI/codex-skill-manager install
+npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager install
 ```
 
 The installer comes from GitHub and invokes native Codex marketplace and plugin commands. The runtime bundle is included; normal installation does not require compilation. **Distribution is currently through GitHub, not the npm registry.**
+
+`--allow-git=root` permits this Git source for this command only, without changing global npm settings. npm 12 blocks Git packages by default; see the [npm configuration reference](https://docs.npmjs.com/cli/using-npm/config/). For older npm versions, use the native Codex commands below.
 
 Restart Codex after installation, then ask your agent:
 
@@ -51,8 +53,8 @@ Repeating the command preserves an existing installation's enabled/disabled stat
 ```text
 Install Codex Skill Manager from:
 https://github.com/maple192600-LI/codex-skill-manager
-Read README.en.md and docs/INSTALL.md, check Node.js 24+, Git, and Codex plugin support,
-then run npx --yes github:maple192600-LI/codex-skill-manager install.
+Read README.en.md and docs/INSTALL.md, check Node.js 24+, npm 12+, Git, and Codex plugin support,
+then run npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager install.
 Install only this plugin. Preserve my other plugins, skills, and global AGENTS.md.
 If the same plugin exists from another source, keep it and tell me.
 Verify native installation records, explain any restart requirement, and after restart
@@ -67,7 +69,7 @@ codex plugin add skill-manager@codex-skill-manager
 ```
 
 ```sh
-npx --yes github:maple192600-LI/codex-skill-manager doctor
+npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager doctor
 ```
 
 See [installation and acceptance](docs/INSTALL.md), the [Codex repository marketplace documentation](https://developers.openai.com/plugins/build/plugins), and [npm exec documentation](https://docs.npmjs.com/cli/v11/commands/npm-exec/).

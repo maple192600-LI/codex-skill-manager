@@ -4,7 +4,7 @@ import {codexPath,runCodexCli} from '../server/codex.mjs';
 import os from 'node:os';
 
 const args=process.argv.slice(2);
-const help=()=>console.log(`Codex 技能管理器 / Codex Skill Manager\n\n安装：npx --yes github:maple192600-LI/codex-skill-manager install\n检查：npx --yes github:maple192600-LI/codex-skill-manager doctor\n\ninstall [--ref main] [--json]  注册本插件市场并通过 Codex 原生接口安装\ndoctor                       只读检查 Node、Codex 和安装状态\n\n需要 Node.js 24+、Git 和支持 plugin 子命令的 Codex。不会改写 AGENTS.md。`);
+const help=()=>console.log(`Codex 技能管理器 / Codex Skill Manager\n\n安装：npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager install\n检查：npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager doctor\n\ninstall [--ref main] [--json]  注册本插件市场并通过 Codex 原生接口安装\ndoctor                       只读检查 Node、Codex 和安装状态\n\n需要 Node.js 24+、npm 12+、Git 和支持 plugin 子命令的 Codex。不会改写 AGENTS.md。`);
 try {
   if(args.includes('--help')||args.includes('-h')){help();}
   else {

@@ -30,13 +30,15 @@
 
 ## 一条命令安装
 
-需要 **Node.js 24+（含 npm/npx）、Git，以及支持 `codex plugin` 命令的 Codex**。目前实际验证环境为 Windows + Codex 桌面客户端；其他系统尚未完成真实客户端验收。
+需要 **Node.js 24+、npm 12+（含 npx）、Git，以及支持 `codex plugin` 命令的 Codex**。目前实际验证环境为 Windows + Codex 桌面客户端；其他系统尚未完成真实客户端验收。
 
 ```sh
-npx --yes github:maple192600-LI/codex-skill-manager install
+npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager install
 ```
 
 安装器从 GitHub 获取，调用 Codex 原生命令注册本仓库的插件市场并安装 `skill-manager`。运行包已经构建好，普通安装无需自己编译。**本项目目前通过 GitHub 分发，尚未发布到 npm 注册表。**
+
+`--allow-git=root` 只在本次命令中允许获取这个 Git 仓库，不修改全局 npm 设置。npm 12 默认禁止 Git 包，需要这项明确许可，见 [npm 配置说明](https://docs.npmjs.com/cli/using-npm/config/)。如果使用较旧的 npm，可改用下方 Codex 原生命令。
 
 安装完成后重启 Codex，再对 agent 说：
 
@@ -51,8 +53,8 @@ npx --yes github:maple192600-LI/codex-skill-manager install
 ```text
 请安装 Codex 技能管理器：
 https://github.com/maple192600-LI/codex-skill-manager
-先阅读仓库 README 和 docs/INSTALL.md，确认 Node.js 24+、Git、Codex 插件命令可用，
-然后执行 npx --yes github:maple192600-LI/codex-skill-manager install。
+先阅读仓库 README 和 docs/INSTALL.md，确认 Node.js 24+、npm 12+、Git、Codex 插件命令可用，
+然后执行 npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager install。
 只安装这个插件，不改动其他插件、技能或我的全局 AGENTS.md。
 如果有其他来源的同名插件，保留原安装并告诉我。
 安装后检查原生安装记录，告诉我是否需要重启；重启后再打开真实侧栏确认加载。
@@ -66,7 +68,7 @@ codex plugin add skill-manager@codex-skill-manager
 ```
 
 ```sh
-npx --yes github:maple192600-LI/codex-skill-manager doctor
+npx --yes --allow-git=root github:maple192600-LI/codex-skill-manager doctor
 ```
 
 细节见 [安装与验收](docs/INSTALL.md)。采用 Codex 的[仓库插件市场机制](https://developers.openai.com/plugins/build/plugins)，`npx` 的执行方式见 [npm 官方文档](https://docs.npmjs.com/cli/v11/commands/npm-exec/)。
