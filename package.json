@@ -1,0 +1,47 @@
+{
+  "name": "codex-skill-manager",
+  "version": "0.1.0",
+  "description": "用中文理解和管理 Codex 的插件、应用、MCP 与技能，并查看有依据的使用记录。",
+  "type": "module",
+  "license": "MIT",
+  "author": "老李不老 (https://github.com/maple192600-LI)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maple192600-LI/codex-skill-manager.git"
+  },
+  "homepage": "https://github.com/maple192600-LI/codex-skill-manager#readme",
+  "bugs": "https://github.com/maple192600-LI/codex-skill-manager/issues",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "codex-skill-manager": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "server/*.mjs",
+    "server/skill-source-catalog.json",
+    "shared/",
+    ".codex-plugin/",
+    ".mcp.json",
+    ".agents/plugins/marketplace.json",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "docs/",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "build:ui": "npm --prefix ui run build",
+    "build:server": "node scripts/build-server.mjs",
+    "build": "npm run build:ui && npm run build:server",
+    "test": "node --test server/tests/*.test.mjs tests/*.test.mjs",
+    "start": "node server/server.bundle.mjs"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "esbuild": "0.25.12",
+    "zod": "3.25.76"
+  }
+}

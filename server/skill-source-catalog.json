@@ -1,0 +1,137 @@
+[
+  {
+    "name": "codebase-design",
+    "source": "mattpocock/skills",
+    "sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2"
+  },
+  {
+    "name": "research",
+    "source": "mattpocock/skills",
+    "sha256": "985569f15739c713d6784887c3d186d4ef9ac85bec5ad9c068d25bf0739928e4"
+  },
+  {
+    "name": "code-review",
+    "source": "mattpocock/skills",
+    "sha256": "09eb147f793e4647949edd32dbad278f0554dfb56e0d46b699cd4c2c55bf0357"
+  },
+  {
+    "name": "domain-modeling",
+    "source": "mattpocock/skills",
+    "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3"
+  },
+  {
+    "name": "grill-with-docs",
+    "source": "mattpocock/skills",
+    "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe"
+  },
+  {
+    "name": "grilling",
+    "source": "mattpocock/skills",
+    "sha256": "befdff1e27a1dfe2a294d5871169ac1afe16d983911daa4f32627514a48c1e15"
+  },
+  {
+    "name": "prototype",
+    "source": "mattpocock/skills",
+    "sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3"
+  },
+  {
+    "name": "setup-matt-pocock-skills",
+    "source": "mattpocock/skills",
+    "sha256": "f148858ffb7f63c03c06fca06e6fdb1d91a35c6b293244b8fdfacd5f4cc028c4"
+  },
+  {
+    "name": "grill-me",
+    "source": "mattpocock/skills",
+    "sha256": "caaf8b8de1684f96e26b28f3c29189db5c89cce4b73e1c93d86164f66ef88637"
+  },
+  {
+    "name": "tdd",
+    "source": "mattpocock/skills",
+    "sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0"
+  },
+  {
+    "name": "implement-spec",
+    "source": "mattpocock/skills",
+    "sha256": "7a22dd2e60b8fcece478ced9d2533582adf3520d695acd3ab715341535c9e56d"
+  },
+  {
+    "name": "implement",
+    "source": "mattpocock/skills",
+    "sha256": "483bdc4ccf4ac31d86ac7beeaa0d0db80313e71e120bb8c59b3196ae5decd53d"
+  },
+  {
+    "name": "to-questionnaire",
+    "source": "mattpocock/skills",
+    "sha256": "b5eb929842ee0e93d867c5e906d183d350f2f2d149eaeaa86967d94d8eda1d3b"
+  },
+  {
+    "name": "triage",
+    "source": "mattpocock/skills",
+    "sha256": "917b0baf74be583e74f110857ed45df2766617f75c00baf61fd136d7af515edf"
+  },
+  {
+    "name": "to-tickets",
+    "source": "mattpocock/skills",
+    "sha256": "56ec23c5b2782785d4e65bff9e315b6d3aeb4ef977c174a219e99489fada1995"
+  },
+  {
+    "name": "writing-for-agents",
+    "source": "mattpocock/skills",
+    "sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a"
+  },
+  {
+    "name": "teach",
+    "source": "mattpocock/skills",
+    "sha256": "550482c2d674b085c9043b87bfdc14a8f2ec453c736119e7fcbb1e9332bffeba"
+  },
+  {
+    "name": "improve-codebase-architecture",
+    "source": "mattpocock/skills",
+    "sha256": "552240a5ab5cec6b67c15dd1ad6e9f6962b1bca6ce870059a8c2713760c20392"
+  },
+  {
+    "name": "pr",
+    "source": "mattpocock/skills",
+    "sha256": "ab63f1cf78647389edcd386c9427c5dfca27ed2836930c24773ffee834c19bcd"
+  },
+  {
+    "name": "wizard",
+    "source": "mattpocock/skills",
+    "sha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1"
+  },
+  {
+    "name": "wayfinder",
+    "source": "mattpocock/skills",
+    "sha256": "9be7b478c389605a24517d27752f278933588da97a1b5921b165f455edf4c5b7"
+  },
+  {
+    "name": "ask-matt",
+    "source": "mattpocock/skills",
+    "sha256": "1371f5ce005de0992a44b137748bfb960a56948aa9871b405fe9d90b24332e3c"
+  },
+  {
+    "name": "wait-what",
+    "source": "mattpocock/skills",
+    "sha256": "d961bb37defd975c539427edb8f450cdbccdcdd552e213c1ece46676a7970905"
+  },
+  {
+    "name": "handoff",
+    "source": "mattpocock/skills",
+    "sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3"
+  },
+  {
+    "name": "diagnosing-bugs",
+    "source": "mattpocock/skills",
+    "sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d"
+  },
+  {
+    "name": "retro",
+    "source": "mattpocock/skills",
+    "sha256": "33fbc28568e3146f20fd908b12998bc0ab30aa4f4c87288199a40793efa94696"
+  },
+  {
+    "name": "to-spec",
+    "source": "mattpocock/skills",
+    "sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088"
+  }
+]

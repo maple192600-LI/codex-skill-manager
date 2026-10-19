@@ -1,0 +1,27 @@
+{
+  "name": "skill-manager",
+  "version": "0.1.0",
+  "description": "在 Codex 内查看、理解和维护已安装的插件、应用、MCP 服务与技能；中文翻译保存在独立层，不改动原始文件。",
+  "author": {
+    "name": "老李不老",
+    "url": "https://github.com/maple192600-LI"
+  },
+  "license": "MIT",
+  "interface": {
+    "displayName": "技能管理器",
+    "shortDescription": "查看和维护 Codex 的插件、应用、MCP 与技能",
+    "longDescription": "技能管理器读取 Codex 当前的插件、应用、MCP 服务和技能状态，用中文展示名称、功能、来源、路径、权限及加载结果，并通过 Codex 现有接口执行启用、关闭和卸载。翻译保存在独立文件中，绝不修改原始插件或技能内容。",
+    "developerName": "老李不老",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "打开技能管理器，查看 Codex 当前安装的插件、应用、MCP 和技能。"
+    ],
+    "brandColor": "#0F766E"
+  },
+  "mcpServers": "./.mcp.json"
+}
