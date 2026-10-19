@@ -1,6 +1,6 @@
 {
   "name": "skill-manager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "在 Codex 内查看、理解和维护已安装的插件、应用、MCP 服务与技能；中文翻译保存在独立层，不改动原始文件。",
   "author": {
     "name": "老李不老",

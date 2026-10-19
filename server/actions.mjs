@@ -6,6 +6,7 @@ import {codexJson,CodexAppServer} from './codex.mjs';
 import {buildInventory,skillRoots,saveSnapshot,validateScope} from './inventory.mjs';
 import {inspectPath,removableEntry,locationSummary} from './locations.mjs';
 import {normalize,within,stateDir} from './state.mjs';
+import {moveSkillToRecovery} from './skill-removal.mjs';
 
 export function createActions({inventory=buildInventory,lookup=inventory,request,json=codexJson,storage=stateDir,open=launchFolder,save=saveSnapshot}={}) {
   const active=new Set();
@@ -153,9 +154,9 @@ export function createActions({inventory=buildInventory,lookup=inventory,request
         const backupRoot=path.resolve(storage,'removed-skills');
         const backup=path.resolve(backupRoot,`${crypto.randomUUID()}-${path.basename(target)}`);
         if(!within(backupRoot,backup)||!skillRoots(before.cwd).some(r=>normalize(path.dirname(target))===normalize(r.path))) throw new Error('移除目标超出已确认安装目录');
-        await fs.mkdir(backupRoot,{recursive:true});
-        await fs.rename(target,backup);
-        return {...skillRemovalResult(item,args.entry,`已移出技能目录；可恢复副本保存在 ${backup}`),backup};
+        const {retainedDirectory}=await moveSkillToRecovery(target,backup);
+        const message=`已卸载技能入口；可恢复文件保存在 ${backup}`+(retainedDirectory?`。原位置仍有无法移走的目录：${retainedDirectory}；该技能入口已移除。`:'');
+        return {...skillRemovalResult(item,args.entry,message),backup,...(retainedDirectory?{retainedDirectory}:{})};
       }));
     },
     async openLocation(args) {

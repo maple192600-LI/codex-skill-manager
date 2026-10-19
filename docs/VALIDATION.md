@@ -1,5 +1,14 @@
 # 验证范围 / Validation scope
 
+## 0.1.1：Windows 技能卸载
+
+- 用真实 Windows 文件读取句柄复现原有 EPERM 整目录移动失败，新增 6 项回归检查；完整源码与安装器检查为 95 项通过。
+- 重建运行包后，通过实际 MCP 请求验证共享读取下卸载、独占读取下保留文件与清单、释放占用后重试成功，以及恢复文件的内容一致性。原生 Codex 强制重读也确认入口已移除。
+- 修复版本在 Windows Codex 的真实侧栏重新加载，逐项操作隔离项目技能：共享读取时卸载成功；独占读取时明确报告未完成、保留两项技能且不显示旧成功提示；释放占用后同项卸载成功并清除错误；普通卸载正常；刷新后测试技能未重新出现。清除筛选并返回个人环境后清单完整。
+- 验收不卸载或切换日常使用的插件和技能；真实界面验收期间个人配置字节未变。恢复文件逐一核对，不只检查成功提示或编译结果。
+
+The Windows removal regression was reproduced with real file handles. Six new regression checks bring the full source/installer suite to 95 passing checks. The rebuilt MCP runtime and native Codex readback were tested separately from the actual desktop sidebar. The sidebar was then verified with isolated project skills for shared-reader removal, honest exclusive-reader failure with retained content, successful retry after release, ordinary removal, and refresh without resurrecting removed entries. Existing user skills and plugins were not uninstalled or toggled.
+
 ## 首次公开发布
 
 实际测试环境：Windows、Node.js 24.18.0、npm 12.0.2、Codex CLI 0.163.0-alpha.10.2。

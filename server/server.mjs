@@ -15,7 +15,7 @@ import {acceptUsageReceipt} from './usage-receipt.mjs';
 
 const pluginRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const version=readJson(path.join(pluginRoot,'.codex-plugin','plugin.json'))?.version||'0.1.0';
-const manager={version,build:'public-0.1.0',loadedFrom:pluginRoot,pid:process.pid};
+const manager={version,build:'windows-uninstall-fix-20261019.8',loadedFrom:pluginRoot,pid:process.pid};
 const UI_URI='ui://skill-manager/index.html';
 const server=new McpServer({name:'skill-manager',title:'技能管理器',version});
 const inventoryStore=createInventoryStore({build:buildInventory,read:readSnapshot,save:saveSnapshot});
